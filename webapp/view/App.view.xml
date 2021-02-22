@@ -1,0 +1,28 @@
+<mvc:View
+    controllerName="be.wl.splitappui.controller.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+                        
+                        <List
+                            items="{/Books}">
+                            <StandardListItem
+                                title="{title}"
+                                description="{ID}"
+                                iconDensityAware="false"
+                                iconInset="false"
+                                press="handlePress"
+                                detailPress="handleDetailPress" />
+                        </List>
+                    </content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
